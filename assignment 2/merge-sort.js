@@ -12,13 +12,13 @@
 
 
 
-function megaSort(array) {
+function mergeSort(array) {
     //base case
     if (n <= array.length) return 
 
 
     // recursive case
-    megaSort()
+    mergeSort()
 }
 //console.log(megaSort())
 
