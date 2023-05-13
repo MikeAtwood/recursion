@@ -9,3 +9,36 @@
     understand what should be going on.
 
 */
+
+
+
+function megaSort(array) {
+    //base case
+    if (n <= array.length) return 
+
+
+    // recursive case
+    megaSort()
+}
+//console.log(megaSort())
+
+// TODO:
+// create array variable
+// Functions looks at the array (length)
+// Sort the left half and then the right half of the array
+// Once sorted, Merge the two halves together
+// console log with user choice of random numbers for the function to sort through
+
+
+/* psuedocode:
+look at array
+open to middle of the array
+look at the numbers on the left side
+[if] number  
+
+[else if] the number is smaller than the next
+    search for smaller number in the left half of array
+
+
+
+*/
