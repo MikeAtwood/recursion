@@ -14,13 +14,26 @@
 
 function mergeSort(array) {
     //base case
-    if (n <= array.length) return 
-
-
-    // recursive case
-    mergeSort()
+    if (array.length < 2) return array;
+    const mid = Math.floor(array.length / 2)
+    const leftArr = array.slice(0, mid)
+    const rightArr = array.slice(mid)
+    return merge(mergeSort(leftArr), mergeSort(rightArr))
 }
-//console.log(megaSort())
+
+function merge(leftArr, rightArr) {
+    const sortedArray = []
+    while(leftArr.length && rightArr.length) {
+        if(leftArr[0] <= rightArr[0]) {
+            sortedArray.push(leftArr.shift())
+        } else {
+            sortedArray.push(rightArr.shift())
+        }
+    }
+    return [...sortedArray, ...leftArr, ...rightArr]
+}
+
+console.log(mergeSort([8, 1, 3, 2, 5, 7, 4, 6]))
 
 // TODO:
 // create array variable
