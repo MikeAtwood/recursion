@@ -1,14 +1,14 @@
 function oddNumbersLessThanTen() {
     let currentNumber = 1;
-  
+
     while (currentNumber < 10) {
-      if (currentNumber % 2 !== 0) {
-        console.log(currentNumber);
-      }
-  
-      currentNumber += 1;
+        if (currentNumber % 2 !== 0) {
+            console.log(currentNumber);
+        }
+
+        currentNumber += 1;
     }
-  }
+}
 
 console.log(oddNumbersLessThanTen())
 
@@ -37,7 +37,7 @@ function oddNumbers(maxNumber) {
     let currentNumber = 1;
 
     while (currentNumber < maxNumber) {
-        if (currentNumber % 2!== 0) {
+        if (currentNumber % 2 !== 0) {
             console.log(currentNumber)
         }
         currentNumber += 1
@@ -54,3 +54,37 @@ when the data changes (if the user inputs 24 for example)/ This helps us answer 
 whether the code we write will scale.
 To do that we need to delve into a new concept: Asymptotic Notations and, in particular, Big O.
 */
+
+// Asymptotic notation:
+/*
+: Are used to describe the run time of an algorithm. Because of an algorithms run time can differ 
+depending on the input, there are several notations that measure that running time in different ways.
+The 3 most common are:
+
+- Big O notation - represent the upper bound of an algorithm. Meaning, the worst case scenario for how
+the algorithm will perform
+
+- Omega notation
+
+- Theta notation
+
+Big O Notation is the most common asymptotic notation you'll see referenced because you need to be 
+sure the worst-case scenario for any code you write is scalable as the inputs grow in your application.
+
+Big O is not a piece of code you can put your algorithm into and it tells you how efficient it is. You
+will need to measure how the number of steps changes as the data grows, and using this you can apply
+Big O Notation to it and measure it against other algorithms.
+
+*/
+
+console.log('~~~~')
+
+function logFunc(n) {
+    if (n === 1) {
+        console.log(n)
+    } else {
+        logFunc(Math.floor(n / 2))
+        console.log(n)
+    }
+}
+console.log(logFunc(8))
