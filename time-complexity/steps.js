@@ -89,6 +89,8 @@ function logFunc(n) {
 }
 console.log(logFunc(32))
 
+console.log('~~~~')
+
 // N x log N complexity
 
 function mergeSort2(arr) {
@@ -119,3 +121,6 @@ function merge2(left, right) {
     return result.concat(left.slice(i)).concat(right.slice(j))
 }
 console.log(mergeSort2([32, 10, 5, 8, 20]))
+console.log('~~~~')
+// Another nlogn function
+
